@@ -1,0 +1,17 @@
+plugins.security.allow_default_init_securityindex: true
+plugins.security.allow_unsafe_democertificates: true
+plugins.security.audit.config.log4j.level: INFO
+plugins.security.audit.type: log4j
+plugins.security.authcz.admin_dn:
+  - 'C=CA,L=Opensearch,O=Opensearch,OU=Opensearch,CN=opensearch'
+plugins.security.check_snapshot_restore_write_privileges: true
+plugins.security.enable_snapshot_restore_privilege: true
+plugins.security.restapi.roles_enabled:
+  - all_access
+  - security_rest_api_access
+plugins.security.ssl.http.enabled: false
+plugins.security.ssl.transport.enforce_hostname_verification: false
+plugins.security.ssl.transport.pemcert_filepath: transport-crt.pem
+plugins.security.ssl.transport.pemkey_filepath: transport-key.pem
+plugins.security.ssl.transport.pemtrustedcas_filepath: transport-root-ca.pem
+plugins.security.unsupported.restapi.allow_securityconfig_modification: true

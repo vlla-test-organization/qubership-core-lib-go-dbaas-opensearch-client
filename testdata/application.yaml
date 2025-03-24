@@ -1,0 +1,4 @@
+dbaas:
+  baseclient:
+    retry:
+      delay-ms: 100
