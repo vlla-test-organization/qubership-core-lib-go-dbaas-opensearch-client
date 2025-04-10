@@ -2,10 +2,12 @@ module github.com/netcracker/qubership-core-lib-go-dbaas-opensearch-client/v5
 
 go 1.22.0
 
+toolchain go1.23.4
+
 require (
 	github.com/docker/go-connections v0.5.0
-	github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3 v3.0.0-20250324180823-aadb82493cb0
-	github.com/netcracker/qubership-core-lib-go/v3 v3.0.0-20250324061806-227fc2609b0a
+	github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3 v3.0.0-20250410103827-8416ab00b901
+	github.com/netcracker/qubership-core-lib-go/v3 v3.0.0-20250410090100-eded4c69a462
 	github.com/opensearch-project/opensearch-go/v4 v4.4.0
 	github.com/stretchr/testify v1.10.0
 	github.com/testcontainers/testcontainers-go v0.35.0

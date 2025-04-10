@@ -6,6 +6,8 @@ import (
 	"testing"
 
 	"github.com/netcracker/qubership-core-lib-go/v3/configloader"
+	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
+	"github.com/netcracker/qubership-core-lib-go/v3/security"
 	"github.com/netcracker/qubership-core-lib-go/v3/context-propagation/baseproviders/tenant"
 	"github.com/netcracker/qubership-core-lib-go/v3/context-propagation/ctxmanager"
 	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
@@ -15,6 +17,8 @@ import (
 )
 
 func init() {
+	serviceloader.Register(1, &security.DummyToken{})
+	serviceloader.Register(1, &security.TenantContextObject{})
 	ctxmanager.Register([]ctxmanager.ContextProvider{tenant.TenantProvider{}})
 }
 
