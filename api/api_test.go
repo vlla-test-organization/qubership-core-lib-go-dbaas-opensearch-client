@@ -1481,7 +1481,8 @@ func prepareTestContainer(t *testing.T, ctx context.Context, identifier string) 
 		Image:        opensearchImage,
 		ExposedPorts: []string{port.Port()},
 		Env:          env,
-		WaitingFor:   wait.ForListeningPort(port).WithStartupTimeout(120 * time.Second),
+		WaitingFor:     wait.ForHTTP("/").WithPort(port).WithStartupTimeout(120 * time.Second),
+		
 	}
 	osContainer, err := testcontainers.GenericContainer(ctx, testcontainers.GenericContainerRequest{
 		ContainerRequest: req,
