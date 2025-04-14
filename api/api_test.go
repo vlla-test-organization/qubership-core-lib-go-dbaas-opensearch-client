@@ -1492,6 +1492,12 @@ func prepareTestContainer(t *testing.T, ctx context.Context, identifier string) 
 		t.Error(err)
 	}
 
+	time.Sleep(5 * time.Second)
+	state, err := osContainer.State(ctx)
+	fmt.Printf("Container state: %v", state)
+	fmt.Printf("Container Status: %v", state.Status)
+	fmt.Printf("Container Health: %v", state.Health)
+
 	os.Unsetenv("TESTCONTAINERS_RYUK_DISABLED")
 
 	return port, osContainer
