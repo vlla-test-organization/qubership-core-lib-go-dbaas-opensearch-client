@@ -19,9 +19,7 @@ import (
 
 const (
 	dbaasAgentUrlEnvName     = "dbaas.agent"
-	keycloakUrlEnvName       = "identity.provider.url"
 	namespaceEnvName         = "microservice.namespace"
-	vaultAddressEnvName      = "vault.addr"
 	testServiceName          = "service_test"
 	propMicroserviceName     = "microservice.name"
 	createDatabaseV3         = "/api/v3/dbaas/test_namespace/databases"
@@ -40,10 +38,8 @@ type DatabaseTestSuite struct {
 func (suite *DatabaseTestSuite) SetupSuite() {
 	StartMockServer()
 	os.Setenv(dbaasAgentUrlEnvName, GetMockServerUrl())
-	os.Setenv(keycloakUrlEnvName, GetMockServerUrl())
 	os.Setenv(namespaceEnvName, "test_namespace")
 	os.Setenv(propMicroserviceName, testServiceName)
-	os.Setenv(vaultAddressEnvName, GetMockServerUrl())
 	os.Setenv(dbaasOpensearchSSlProperty, sslModeEnable)
 
 	yamlParams := configloader.YamlPropertySourceParams{ConfigFilePath: "testdata/application.yaml"}
@@ -52,10 +48,8 @@ func (suite *DatabaseTestSuite) SetupSuite() {
 
 func (suite *DatabaseTestSuite) TearDownSuite() {
 	os.Unsetenv(dbaasAgentUrlEnvName)
-	os.Unsetenv(keycloakUrlEnvName)
 	os.Unsetenv(namespaceEnvName)
 	os.Unsetenv(propMicroserviceName)
-	os.Unsetenv(vaultAddressEnvName)
 	os.Unsetenv(dbaasOpensearchSSlProperty)
 	StopMockServer()
 }

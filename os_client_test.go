@@ -14,8 +14,6 @@ import (
 	"time"
 
 	"github.com/docker/go-connections/nat"
-	"github.com/netcracker/qubership-core-lib-go/v3/serviceloader"
-	"github.com/netcracker/qubership-core-lib-go/v3/security"
 	"github.com/netcracker/qubership-core-lib-go/v3/context-propagation/baseproviders/tenant"
 	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
 	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/cache"
@@ -40,11 +38,6 @@ const (
 
 	statusCreated = 201
 )
-
-func init() {
-	serviceloader.Register(1, &security.DummyToken{})
-	serviceloader.Register(1, &security.TenantContextObject{})
-}
 
 func (suite *DatabaseTestSuite) TestOsClient_GetConnection_ConnectionError() {
 	ctx := context.Background()

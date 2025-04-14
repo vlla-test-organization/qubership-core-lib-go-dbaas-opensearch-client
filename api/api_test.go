@@ -36,9 +36,7 @@ const (
 
 const (
 	dbaasAgentUrlEnvName     = "dbaas.agent"
-	keycloakUrlEnvName       = "identity.provider.url"
 	namespaceEnvName         = "microservice.namespace"
-	vaultAddressEnvName      = "vault.addr"
 	testServiceName          = "service_test"
 	propMicroserviceName     = "microservice.name"
 	createDatabaseV3         = "/api/v3/dbaas/test_namespace/databases"
@@ -64,16 +62,17 @@ type OsAPITestSuite struct {
 	network     testcontainers.Network
 }
 
-func (suite *OsAPITestSuite) SetupSuite() {
+func init() {
 	serviceloader.Register(1, &security.DummyToken{})
 	serviceloader.Register(1, &security.TenantContextObject{})
+}
+
+func (suite *OsAPITestSuite) SetupSuite() {
 	StartMockServer()
 
 	os.Setenv(dbaasAgentUrlEnvName, GetMockServerUrl())
-	os.Setenv(keycloakUrlEnvName, GetMockServerUrl())
 	os.Setenv(namespaceEnvName, "test_namespace")
 	os.Setenv(propMicroserviceName, testServiceName)
-	os.Setenv(vaultAddressEnvName, GetMockServerUrl())
 
 	yamlParams := configloader.YamlPropertySourceParams{ConfigFilePath: "testdata/application.yaml"}
 	configloader.Init(configloader.BasePropertySources(yamlParams)...)
@@ -104,10 +103,8 @@ func (suite *OsAPITestSuite) TearDownSuite() {
 		}
 	}()
 	os.Unsetenv(dbaasAgentUrlEnvName)
-	os.Unsetenv(keycloakUrlEnvName)
 	os.Unsetenv(namespaceEnvName)
 	os.Unsetenv(propMicroserviceName)
-	os.Unsetenv(vaultAddressEnvName)
 	StopMockServer()
 }
 
