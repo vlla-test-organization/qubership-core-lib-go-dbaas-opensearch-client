@@ -8,24 +8,24 @@ import (
 	"os"
 	"testing"
 
-	"github.com/netcracker/qubership-core-lib-go/v3/configloader"
-	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/model"
-	. "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/testutils"
 	"github.com/opensearch-project/opensearch-go/v4"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
+	dbaasbase "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/model"
+	. "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/testutils"
+	"github.com/vlla-test-organization/qubership-core-lib-go/v3/configloader"
 )
 
 const (
-	dbaasAgentUrlEnvName     = "dbaas.agent"
-	namespaceEnvName         = "microservice.namespace"
-	testServiceName          = "service_test"
-	propMicroserviceName     = "microservice.name"
-	createDatabaseV3         = "/api/v3/dbaas/test_namespace/databases"
-	getDatabaseV3            = "/api/v3/dbaas/test_namespace/databases/get-by-classifier/opensearch"
-	username                 = "service_test"
-	password                 = "qwerty127"
+	dbaasAgentUrlEnvName = "dbaas.agent"
+	namespaceEnvName     = "microservice.namespace"
+	testServiceName      = "service_test"
+	propMicroserviceName = "microservice.name"
+	createDatabaseV3     = "/api/v3/dbaas/test_namespace/databases"
+	getDatabaseV3        = "/api/v3/dbaas/test_namespace/databases/get-by-classifier/opensearch"
+	username             = "service_test"
+	password             = "qwerty127"
 
 	testPrefix = "test"
 )

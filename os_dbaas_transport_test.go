@@ -3,9 +3,9 @@ package osdbaas
 import (
 	"context"
 
-	dbaasbase "github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3"
-	"github.com/netcracker/qubership-core-lib-go-dbaas-opensearch-client/v5/model"
 	"github.com/stretchr/testify/assert"
+	dbaasbase "github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-opensearch-client/v5/model"
 )
 
 func (suite *DatabaseTestSuite) TestOsClient_Normalize_error() {

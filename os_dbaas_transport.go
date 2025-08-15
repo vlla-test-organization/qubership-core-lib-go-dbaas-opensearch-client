@@ -4,8 +4,8 @@ import (
 	"context"
 	"strings"
 
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/cache"
 	"github.com/opensearch-project/opensearch-go/v4/opensearchapi"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/cache"
 )
 
 type OpensearchClient interface {

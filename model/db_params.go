@@ -3,7 +3,7 @@ package model
 import (
 	"context"
 
-	"github.com/netcracker/qubership-core-lib-go-dbaas-base-client/v3/model/rest"
+	"github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3/model/rest"
 )
 
 // DbParams allows store parameters for database creation
