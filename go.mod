@@ -6,8 +6,8 @@ toolchain go1.23.5
 
 require (
 	github.com/docker/go-connections v0.5.0
-	github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3 v3.0.1
-	github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.1
+	github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3 latest
+	github.com/vlla-test-organization/qubership-core-lib-go/v3 latest
 	github.com/opensearch-project/opensearch-go/v4 v4.3.0
 	github.com/stretchr/testify v1.10.0
 	github.com/testcontainers/testcontainers-go v0.35.0
