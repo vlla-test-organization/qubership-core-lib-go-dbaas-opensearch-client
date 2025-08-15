@@ -4,6 +4,10 @@ go 1.23.0
 
 toolchain go1.23.5
 
+retract (
+    v5.0.1
+)
+
 require (
 	github.com/docker/go-connections v0.5.0
 	github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3 latest
