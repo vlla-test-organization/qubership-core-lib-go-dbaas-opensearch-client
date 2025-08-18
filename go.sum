@@ -149,10 +149,10 @@ github.com/tklauser/numcpus v0.6.1 h1:ng9scYS7az0Bk4OZLvrNXNSAO2Pxr1XXRAPyjhIx+F
 github.com/tklauser/numcpus v0.6.1/go.mod h1:1XfjsgE2zo8GVw7POkMbHENHzVg3GzmoZ9fESEdAacY=
 github.com/viney-shih/go-lock v1.1.2 h1:3TdGTiHZCPqBdTvFbQZQN/TRZzKF3KWw2rFEyKz3YqA=
 github.com/viney-shih/go-lock v1.1.2/go.mod h1:Yijm78Ljteb3kRiJrbLAxVntkUukGu5uzSxq/xV7OO8=
-github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3 v3.0.6 h1:SxGUcCsRUq7Opkb77g6ELcekkNUSu+YXG2VbAj+cQ+k=
-github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3 v3.0.6/go.mod h1:zsOUdwsZbZFJEVDsQBqNw77UhJc5RGV8QpFgsoIUgJg=
-github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.6 h1:sVTGBjAkBEoqk7fUh1dE3J2BoamW1jHNGFfnd4BrK7o=
-github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.6/go.mod h1:DC6VVLa4r2LxfPMoEn9WmQEdasR61DB5eEtJnIGRyXw=
+github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3 v3.0.7 h1:PbK9PqdU5Y6GczDhRIKpwAdznGXALJh7+JST/Zluycg=
+github.com/vlla-test-organization/qubership-core-lib-go-dbaas-base-client/v3 v3.0.7/go.mod h1:P0PxBIvQ+WvONCOPivKi3ePDSukw5lqoqaiem6XWERw=
+github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.7 h1:hGfbva1hgKLkXQ10Y6wCVj2Mm0e6uErXQc0SipjnaeE=
+github.com/vlla-test-organization/qubership-core-lib-go/v3 v3.0.7/go.mod h1:DC6VVLa4r2LxfPMoEn9WmQEdasR61DB5eEtJnIGRyXw=
 github.com/wI2L/jsondiff v0.6.0 h1:zrsH3FbfVa3JO9llxrcDy/XLkYPLgoMX6Mz3T2PP2AI=
 github.com/wI2L/jsondiff v0.6.0/go.mod h1:D6aQ5gKgPF9g17j+E9N7aasmU1O+XvfmWm1y8UMmNpw=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
