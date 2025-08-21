@@ -1,6 +1,6 @@
 module github.com/vlla-test-organization/qubership-core-lib-go-dbaas-opensearch-client/v5
 
-go 1.23.0
+go 1.23
 
 toolchain go1.23.5
 
